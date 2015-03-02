@@ -1,0 +1,41 @@
+<div class="container" ng-controller="HeaderCtrl">
+
+  <div class="navbar navbar-default" role="navigation">
+
+
+
+
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="#/">Oppfølgningsloggen</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="js-navbar-collapse">
+
+      <ul class="nav navbar-nav navbar-left">
+        <li ui-sref-active="active"><a ui-sref="main">Skrivebord</a>
+        </li>
+        <li ui-sref-active="active"><a ui-sref="about">Ny hendelse</a>
+        </li>
+
+        <li ng-show="isAuthenticated" ui-sref-active="active"><a ui-sref="register">Søk</a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li ui-sref-active="active" ng-hide="isAuthenticated"><a ui-sref="login">Logg inn</a>
+        </li>
+        <li><a ng-show="isAuthenticated" ui-sref="logout">Logg ut</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
